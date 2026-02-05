@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Space Battle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🎬 BACKGROUND VIDEO (ONLY ONE) -->
+<video id="bgVideo" autoplay muted loop playsinline>
+    <source src="assets/space_loop.mp4" type="video/mp4">
+</video>
+
+<!-- 🔹 START MENU -->
+<div id="menuScreen" class="screen">
+    <h1>🚀 SPACE BATTLE</h1>
+    <p>Destroy enemies. Defeat the boss. Level up.</p>
+    <button id="startBtn">START GAME</button>
+</div>
+<!-- 📘 INSTRUCTIONS SCREEN -->
+<div id="instructionsScreen" class="screen hidden">
+    <h1>🎮 HOW TO PLAY</h1>
+    <p>
+        ➤ Move with Arrow Keys or Drag on Mobile<br>
+        ➤ Touch / Space to Shoot<br>
+        ➤ Destroy enemies to spawn Boss<br>
+        ➤ Collect Powerups 💎<br>
+        ➤ Beat all Bosses to Win 🏆
+    </p>
+    <button id="startGameBtn">OK, START</button>
+</div>
+
+
+<!-- 🔹 HUD -->
+<div id="hud">
+    <div class="panel">Score: <span id="scoreUI">0</span></div>
+    <div class="panel">HP: <span id="healthUI">100</span></div>
+    <div class="panel">Weapon: <span id="weaponUI">Normal</span></div>
+    <button id="muteBtn">🔊</button>
+
+
+</div>
+
+<!-- 🔹 GAME OVER -->
+<div id="gameOverScreen" class="screen hidden">
+    <h1>GAME OVER</h1>
+    <p>Your Score: <span id="finalScore">0</span></p>
+    <button onclick="location.reload()">PLAY AGAIN</button>
+</div>
+
+<!-- 🏆 WIN SCREEN -->
+<div id="winScreen" class="screen hidden">
+    <h1>🏆 YOU WIN!</h1>
+    <p>All levels cleared</p>
+    <p class="coming-soon">🚀 Next 10 Levels Coming Soon</p>
+    <button id="winRestartBtn">PLAY AGAIN</button>
+</div>
+
+
+<!-- 🔓 SKILL UNLOCK POPUP -->
+<div id="skillUnlock" class="skill-popup hidden">
+    <h2>⚡ NEW SKILL UNLOCKED!</h2>
+    <p>Vertical Movement Activated</p>
+</div>
+
+<canvas id="gameCanvas"></canvas>
+
+
+</body>
+<button id="muteBtn" style="position:fixed; top:10px; right:10px; z-index:10;">🔊</button>
+<script src="game.js"></script>
+</html>
+
